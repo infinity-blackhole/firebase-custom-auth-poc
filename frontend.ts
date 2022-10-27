@@ -15,6 +15,4 @@ if (typeof token != "string") {
 readFile(firebaseConfigFile, "utf8")
   .then((firebaseConfig) => initializeApp(JSON.parse(firebaseConfig)))
   .then((app) => signInWithCustomToken(getAuth(app), token))
-  .then((user) => {
-    console.log(user);
-  });
+  .then((user) => console.log(user));
